@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 2.0
+apiversion: 2
+description: My module
+author: Katsumi ISHIDA
+license: LGPL Version 2.1
+copyright: (C) 2013 Katsumi ISHIDA All Rights Reserved.
+
+
+# these should not be edited
+name: usbserial
+moduleid: jp.isisredirect.usbserial
+guid: 5277d3b4-a794-4bce-b658-cebc98c36830
+platform: android
+minsdk: 2.1.0.GA
