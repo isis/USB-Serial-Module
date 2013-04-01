@@ -14,5 +14,8 @@
 		<delete file="${titanium.platform}/../../../../${module.id}-android-${manifest.version}.zip"/>
 	</target>
 	
+	<path id="project.classpath">
+		<pathelement path="${google.apis}/libs/usb.jar"/>
+	</path>
 	<import file="${titanium.platform}/../module/android/build.xml"/>
 </project>

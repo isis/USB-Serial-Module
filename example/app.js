@@ -43,25 +43,9 @@ win.add(conTextField);
 win.add(sendText);
 win.add(sendbutton);
 
-// TODO: write your module tests here
 var USBSERIAL = require('jp.isisredirect.usbserial');
 Ti.API.info("module is => " + USBSERIAL);
-/*
-self.addEventListener('itemSelected', function(e) {
-	lbl.text = e.name + ': ' + e.address + ' paired:' + e.paired;
-	if (USBSERIAL.bond(e.address, "1234")) {
-		USBSERIAL.connect(e.address, true);
-	} else {
-		var dialog = Ti.UI.createAlertDialog({
-			cancel : 1,
-			buttonNames : ['OK'],
-			message : 'pairing result',
-			title : 'Not paired'
-		});
-		dialog.show();
-	}
-});
-*/
+
 
 clearbutton.addEventListener("click", function(e) {
 	conTextField.value = "";
@@ -77,5 +61,8 @@ sendbutton.addEventListener("click", function(e) {
 USBSERIAL.addEventListener(USBSERIAL.RECEIVED, function(e) {
 	conTextField.value += '\n' + e.data.length + ":" + e.data +";";
 });
+
+USBSERIAL.open();
+conTextField.value += '\ndevice' + USBSERIAL.getDeviceName();
 
 win.open();
