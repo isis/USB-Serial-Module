@@ -51,7 +51,7 @@ public class UsbserialModule extends KrollModule
 {
 	// Standard Debugging variables
 	private static final String LCAT = "UsbserialModule";
-	private static final boolean DBG = true;//TiConfig.LOGD;
+	private static final boolean DBG = TiConfig.LOGD;
 
 	@Kroll.constant
 	public static final String CONNECTED = "connected";
@@ -148,7 +148,8 @@ public class UsbserialModule extends KrollModule
 	private final SerialInputOutputManager.Listener mListener = new SerialInputOutputManager.Listener() {
 		@Override
 		public void onRunError(Exception e) {
-			Log.d(LCAT, "Runner stopped.");
+			if (DBG) 
+				Log.d(LCAT, "Runner stopped.");
 		}
 
 		@Override
@@ -259,7 +260,7 @@ public class UsbserialModule extends KrollModule
     			}
 
             } catch (IOException e) {
-                Log.e(LCAT, "Error setting up device: " + e.getMessage(), e);
+            	if (DBG) Log.e(LCAT, "Error setting up device: " + e.getMessage(), e);
                 try {
                     mSerialDevice.close();
                 } catch (IOException e2) {
