@@ -3,7 +3,6 @@ USB-Serial-Module
 
 USB Serial Module for Android that is a wrapper of usb-serial-for-android http://code.google.com/p/usb-serial-for-android
 
-# *USB Serial Module*
 
 ## Description
 
