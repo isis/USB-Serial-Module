@@ -186,7 +186,7 @@ device name
 #### receive
 
 ##### property
-+data : Titanium.Buffer
++ data : Titanium.Buffer
 
 ## Usage
 For details of setting configurations of your Titanium project that is necessary to use USB serial, see [Step by step](./stepbystep.html).
