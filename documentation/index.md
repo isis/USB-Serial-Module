@@ -106,26 +106,26 @@ The usbserial variable is a reference to the Module object.
 
 ##### Parameters
 
-+baudRate
++ baudRate
 
 (optional)
 
-+dataBits
++ dataBits
 
 (optional)
 
-+stopBits
++ stopBits
 
 (optional)
 
-+parity
++ parity
 
 (optional)
 
 
 ##### Returns
 
-+Boolean
++ Boolean
 
 true if succeeded.
 
@@ -133,63 +133,53 @@ true if succeeded.
 
 ##### Parameters
 
-+void
++ void
 
 ##### Returns
 
-+void
++ void
 
 #### getDeviceName() : String 
 
 ##### Parameters
 
-+void
++ void
 
 ##### Returns
 
-+String
++ String
 device name
 
 #### setParameters(int baudRate, int dataBits, int stopBits, int parity) : Boolean
 
 ##### Parameters
 
-+baudRate
++ baudRate
 
-+dataBits
++ dataBits
 
-+stopBits
++ stopBits
 
-+parity
++ parity
 
 ##### Returns
 
-+Boolean
++ Boolean
 
 #### sendData(Titanium.Buffer buffer) : void
 
 ##### Parameters
 
-+buffer : Titanium.Buffer
++ buffer : Titanium.Buffer
 
 ##### Returns
 
-+void
-
-#### getIsConnected() : Boolean
-
-##### Parameters
-
-+void
-
-##### Returns
-
-+Boolean
-
++ void
 
 ### module property
+#### isConnected : Boolean
++ Boolean
 
-non
 
 ### module events
 
